@@ -1,0 +1,18 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.5
+        with:
+          owner: 1488darkStalker228
+          repo: tests
+          github_token: ${{ secrets.G_ACCESS_TOKEN }}
+          workflow_file_name: playwright.yml

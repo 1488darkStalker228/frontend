@@ -1,7 +1,7 @@
 import React from "react";
 
 function App() {
-  // return <div className="App"></div>;
+  //return //<div className="App"></div>;
   //Найти второе минимальное число;
   const arr = [-100, 2, 34, 43, 4, 0, 1, 1, 1, 1, 1, 15, -15, -14];
   let min = arr[0];
