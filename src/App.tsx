@@ -1,23 +1,49 @@
-import React from "react";
+import React from 'react'
+import {Route, Routes} from 'react-router-dom'
+import Home from './components/Home'
 
-function App() {
-  //return //<div className="App"></div>;
-  //Найти второе минимальное число;
-  const arr = [-100, 2, 34, 43, 4, 0, 1, 1, 1, 1, 1, 15, -15, -14];
-  let min = arr[0];
-  let secMin = arr[0];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < min) {
-      min = arr[i];
-    }
-    if (arr[i] < secMin && arr[i] !== min) {
-      secMin = arr[i];
+export default function App() {
+  class Base {
+    baseMethod() {
+      console.log('я пидорас')
     }
   }
 
-  console.log(min);
-  console.log(`${secMin} - вторая минималка`);
+  class Test extends Base {
+    baseMethod() {
+      super.baseMethod()
+      console.log('я сосал хуятину')
+    }
+  }
+
+  new Test().baseMethod()
+
+
+  return (
+    <div className="App">
+      <h1>А это главная</h1>
+      <ul>
+      </ul>
+      <Routes>
+        <Route path="/home" Component={Home} />
+      </Routes>
+    </div>
+  )
 }
 
-export default App;
+/* const arr = [-100, 2, 34, 43, 4, 0, 1, 1, 1, 1, 1, 15, -15, -14];
+let min = arr[0];
+let secMin = arr[0];
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] < min) {
+    min = arr[i];
+  }
+  if (arr[i] < secMin && arr[i] !== min) {
+    secMin = arr[i];
+  }
+}
+
+console.log(min);
+console.log(`${secMin} - вторая минималка`); */

@@ -6,14 +6,14 @@ on:
       - master
 
 jobs:
-  tests:
-    name: Tests
+  playwright-tests:
+    name: "playwright-tests"
     runs-on: ubuntu-latest
     steps:
       - uses: convictional/trigger-workflow-and-wait@v1.6.5
         with:
           owner: 1488darkStalker228
-          repo: tests
+          repo: page-factory-tests
           github_token: ${{ secrets.G_ACCESS_TOKEN }}
           workflow_file_name: playwright.yml
           ref: master
