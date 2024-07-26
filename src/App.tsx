@@ -4,20 +4,7 @@ import Home from './components/Home'
 
 
 export default function App() {
-  class Base {
-    baseMethod() {
-      console.log('я пидорас')
-    }
-  }
 
-  class Test extends Base {
-    baseMethod() {
-      super.baseMethod()
-      console.log('я сосал хуятину')
-    }
-  }
-
-  new Test().baseMethod()
 
 
   return (
