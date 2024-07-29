@@ -19,7 +19,6 @@ export default function App() {
         }
       }
     }
-
     return arr3[arr3.indexOf(overlappingValue)]
   }
 
